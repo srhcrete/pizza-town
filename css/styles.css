@@ -7,5 +7,13 @@ background-color: #b11e1e;
   background-image: url(http://drinkkangen.de/images/pizz.png);
   background-position: center;
   text-align: center;
-  text-shadow: black 0 0px 10px; 
+  text-shadow: black 0 0px 10px;
+}
+#meat-toppings {
+  font-size: 15px;
+  color:#b1c2ed
+}
+#veg-toppings {
+  font-size: 15px;
+  color:#b1c2ed
 }
