@@ -1,6 +1,5 @@
 
 
-
 function Pizza(size, sauce, crust, meat, veg) {
   this.size = size;
   this.sauce = sauce;
@@ -12,8 +11,6 @@ function Pizza(size, sauce, crust, meat, veg) {
 Pizza.prototype.totalPrice = function() {
   return (this.size + this.sauce + this.crust + this.meat + this.veg).toFixed(2);
 };
-
-
 
 $(document).ready(function() {
   $('#pizza-form').submit(function(event) {
@@ -27,7 +24,7 @@ $(document).ready(function() {
      var newPizza = new Pizza (selectedSize, selectedSauce, selectedCrust, selectedMeat, selectedVeggie);
 
 console.log(newPizza.totalPrice());
-$('#show-pizza').append(newPizza.totalPrice());
+$('#show-pizza').append("$" + newPizza.totalPrice());
 console.log(newPizza);
 
      //addPrices(newPizza);
