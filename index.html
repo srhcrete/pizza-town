@@ -22,37 +22,46 @@
           <h2>Select your pizza order below</h2>
           <form class="submit" id="pizza-form">
             <div class="form-group">
+              <label for="select-size">Pick your size:</label>
+              <select class="form-control" id="select-size" name="select-size">
+                <option value="1">Small</option>
+                <option value="2">Medium</option>
+                <option value="3">Large</option>
+              </select>
+            </div>
+            <div class="form-group">
               <label for="select-sauce">Pick your sauce:</label>
               <select class="form-control" id="select-sauce" name="select-sauce">
-                <option value="marinara">Marinara</option>
-                <option value="garlic-parmesan">Garlic-Parmesan</option>
-                <option value="spicy-bbq">Spicy BBQ</option>
+                <option value="0">Marinara</option>
+                <option value="4">Garlic-Parmesan</option>
+                <option value="4">Spicy BBQ</option>
               </select>
             </div>
             <div class="form-group">
               <label for="select-crust">Pick your crust:</label>
               <select class="form-control" id="select-crust" name="select-crust">
-                <option value="regular">Regular</option>
-                <option value="thin">Thin</option>
+                <option value="0">Regular</option>
+                <option value="0">Thin</option>
               </select>
             </div>
             <div class="form-group">
               <label for="select-meat">Pick your meat toppings:</label>
               <select class="form-control" name="select-meat" id="select-meat">
-                <option value="pep">Pepperoni</option>
-                <option value="chicken">Chicken</option>
-                <option value="bacon">Bacon</option>
-                <option value="sausage">Sausage</option>
+                <option value="5">Pepperoni</option>
+                <option value="5">Chicken</option>
+                <option value="5">Bacon</option>
+                <option value="5">Sausage</option>
               </select>
             </div>
             <div class="form-group">
               <label for="select-veg">Pick your veggie toppings:</label>
               <select class="form-control" name="select-veg" id="select-veg">
-                <option value="green-pep">Green Peppers</option>
-                <option value="red-onion">Red Onion</option>
-                <option value="mushroom">Mushroom</option>
+                <option name= "pepper" value="5">Green Peppers</option>
+                <option name= "onion" value="5">Red Onion</option>
+                <option name= "mushroom" value="5">Mushroom</option>
               </select>
             </div>
+            <button type='submit' class='btn'>Check Pizza Price</button>
           </form>
         </div>
         <div class="container" id='show-pizza'>
