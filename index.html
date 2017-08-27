@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="container">
+
       <div class="row">
         <div class="col-md-12">
           <div class="jumbotron">
@@ -17,10 +18,24 @@
           </div>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" id="start-order">
+          <p>Pizza Town is a family owned business, making gourmet pizzas since 1981. We're proud partners with local suppliers and food producers. Our farmers deliver straight to the restuarant throughout the week, ensuring that you have only the freshest local ingredients for on your favorite pie. We do delivery. Check out the menu and start your order below.</p>
+          <button type="submit" name="start-order" class="btn btn-success" id="startOrder">Start your Order</button>
+        </div>
+      </div>
+<!-- hide start-order show pizza-form on start-order click -->
+
+
+      <div class="row">
+        <div class="col-md-12" id='form-div'>
           <h2>Select your pizza order below</h2>
           <form class="submit" id="pizza-form">
+            <div class="form-group">
+              <label for="name">Name for order:</label>
+              <input type="text" class="form-control" id="name" placeholder="name for order">
+            </div>
             <div class="form-group">
               <label for="select-size">Pick your size:</label>
               <select class="form-control" id="select-size" name="select-size">
@@ -47,35 +62,50 @@
               <label for="select-veg-toggings">Pick your veggie toppings:</label>
               <div class="form-group" id="veg-toppings">
                 <label name="topping">Green Pepper</label>
-                <input type= "checkbox" name= "topping" value="1.00">
+                <input class="sum" type= "checkbox" name= "topping" value="1.00">
                 <label  name="topping">Red Onion</label>
-                <input type= "checkbox" name= "topping" value="1.00">
+                <input class="sum" type= "checkbox" name= "topping" value="1.00">
                 <label name="topping">Garlic</label>
-                <input type= "checkbox" name= "topping" value="1.00">
+                <input  class="sum" type= "checkbox" name= "topping" value="1.00">
                 <label name="topping">Olives</label>
-                <input type= "checkbox" name= "topping" value="1.00">
+                <input class="sum" type= "checkbox" name= "topping" value="1.00">
                 <label name="topping">Feta</label>
-                <input type= "checkbox" name= "topping" value="1.00">
+                <input class="sum" type= "checkbox" name= "topping" value="1.00">
             </div>
             <label for="select-veg-toggings">Pick your meat toppings:</label>
             <div class="form-group" id="meat-toppings">
               <label name="topping">Pepperoni</label>
-              <input type= "checkbox" name= "topping" value="1.00">
+              <input class="sum" type= "checkbox" name= "topping" value="1.00">
               <label  name="topping">Bacon</label>
-              <input type= "checkbox" name= "topping" value="1.00">
+              <input sum="sum" type= "checkbox" name= "topping" value="1.00">
               <label name="topping">Chicken</label>
-              <input type= "checkbox" name= "topping" value="1.00">
+              <input  class="sum" type= "checkbox" name= "topping" value="1.00">
               <label name="topping">Sausage</label>
-              <input type= "checkbox" name= "topping" value="1.00">
+              <input class="sum" type= "checkbox" name= "topping" value="1.00">
           </div>
-            <button type='submit' class='btn btn-primary'>Check Pizza Price</button>
+            <button type='submit' class='btn btn-info' id="addPizza">Add Pizza to Order</button>
           </form>
         </div>
-        <div class="container" id='show-pizza'>
-
-        </div>
-
       </div>
+
+      <!-- hide pizza-form and show continueOrder on addPizza click -->
+
+      <div class="container" id="continueOrder">
+        <h2>Would you like to add another pizza to your order?</h2>
+        <button type="button" class="btn btn-warning" id="newPizza">Add another pizza</button>
+        <button type="button" class="btn btn-primary" id="completeOrder">Complete Order</button>
+      </div>
+
+<!-- show pizza-form hide continueOrder on newPizza click || hide continueOrder and show show-pizza on completeOrder click -->
+
+      <div class="container" id='show-order'>
+        <h2>Total Order:</h2>
+        <ul id="total-order">
+
+        </ul>
+      </div>
+
+
     </div>
 
 

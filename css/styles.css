@@ -8,6 +8,7 @@ background-color: #b11e1e;
   background-position: center;
   text-align: center;
   text-shadow: black 0 0px 10px;
+  color: #def7e6;
 }
 #meat-toppings {
   font-size: 15px;
@@ -16,4 +17,13 @@ background-color: #b11e1e;
 #veg-toppings {
   font-size: 15px;
   color:#b1c2ed
+}
+#form-div {
+  display: none;
+}
+#continueOrder {
+  display: none;
+}
+#show-order {
+  display: none;
 }
