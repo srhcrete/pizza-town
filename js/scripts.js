@@ -1,40 +1,30 @@
 
-function Order(name, total) {
+function Order(name, address, total) {
   this.name = name;
+  this.address = address;
   total = total;
 }
 
-var orderArr = [];
+var cart = [];
 
 function makeOrder() {
-  name = $('#name').val();
-  newOrder = new Order (name);
+  name = $('#orderName').val();
+  address = $('#address').val();
+  newOrder = new Order (name, address);
 }
 
 function sumOrder() {
-  var sum = orderArr.reduce(add, 0);
-  function add(a, b) {
+  var sum = cart.reduce(add, 0);
+    function add(a, b) {
     return a + b;
   }
   newOrder.total = sum;
-  console.log(sum);
-  console.log(newOrder);
 }
-// function updateElementContents(element, contents) {
-//   var htmlString = '';
-//   contents = [].concat(contents);
-//   element.hide().empty();
-//   htmlString = contents.map(function(contentItem) {
-//     return '<p><span class="type">' + contentItem + '</span></p>';
-//   }).join('');
-//   element.append(htmlString);
-//   element.show();
-// }
-//
+
 function updatePriceElement(newOrder) {
-//   updateElementContents(window.$('#show-order'), [newOrder.name, newOrder.total]);
-      $('#total-order').append("<ul>" + newOrder.name + "</ul>");
-      $('#total-order').append("<ul>" + "Total Price: $" + newOrder.total + "</ul>");
+  $('#total-order').append("<ul>" + "Name on Order: "+ newOrder.name + "</ul>");
+  $('#total-order').append("<ul>" + "Address for Delivery: "+ newOrder.address + "</ul>");
+  $('#total-order').append("<ul>" + "Total Price: $" + newOrder.total + "</ul>");
 }
 
 var newPizza;
@@ -63,11 +53,9 @@ function submitPizza() {
   sumToppings();
   makeOrder();
   newPizza = new Pizza (selectedSize, selectedSauce, selectedCrust, toppings);
-  orderArr.push(newPizza.pizzaPrice());
-  console.log(orderArr);
-
+  cart.push(newPizza.pizzaPrice());
+  console.log(newPizza);
 }
-
 
 $(document).ready(function() {
   $('#startOrder').click(function() {
@@ -84,11 +72,13 @@ $(document).ready(function() {
 
   $('#newPizza').click(function() {
     $('#form-div').show();
+    $('#continueOrder').hide();
     toppings=0;
   });
 
   $('#completeOrder').click(function() {
     $('#show-order').show();
+    $('#continueOrder').hide();
     sumOrder();
     updatePriceElement(newOrder);
   });

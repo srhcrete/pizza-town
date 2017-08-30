@@ -1,6 +1,6 @@
 body {
-color: #eacece;
-background-color: #b11e1e;
+  color: #eacece;
+  background-color: #b11e1e;
 }
 
 .jumbotron {
@@ -10,20 +10,31 @@ background-color: #b11e1e;
   text-shadow: black 0 0px 10px;
   color: #def7e6;
 }
+
 #meat-toppings {
   font-size: 15px;
   color:#b1c2ed
 }
+
 #veg-toppings {
   font-size: 15px;
   color:#b1c2ed
 }
+
 #form-div {
   display: none;
 }
+
 #continueOrder {
   display: none;
 }
+
 #show-order {
   display: none;
+  font-size: 30px;
+}
+
+.btn{
+  margin-left: 20px;
+  margin-right: 10px;
 }
